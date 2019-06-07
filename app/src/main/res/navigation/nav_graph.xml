@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.ayala.taller2_00189617.fragments.HomeFragment"
+              android:label="fragment_home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/next_action" app:destination="@id/cameraFragment"/>
+    </fragment>
+    <fragment android:id="@+id/cameraFragment" android:name="com.ayala.taller2_00189617.fragments.CameraFragment"
+              android:label="fragment_camera" tools:layout="@layout/fragment_camera">
+        <action android:id="@+id/next_action" app:destination="@id/photosFragment"/>
+    </fragment>
+    <fragment android:id="@+id/photosFragment" android:name="com.ayala.taller2_00189617.fragments.PhotosFragment"
+              android:label="fragment_photos" tools:layout="@layout/fragment_photos">
+        <action android:id="@+id/next_action" app:destination="@id/lastFragment"/>
+        <action android:id="@+id/home_action" app:destination="@id/homeFragment"/>
+    </fragment>
+    <fragment android:id="@+id/lastFragment" android:name="com.ayala.taller2_00189617.fragments.LastFragment"
+              android:label="fragment_last" tools:layout="@layout/fragment_last"/>
+</navigation>
+
